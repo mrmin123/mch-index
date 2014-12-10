@@ -1,0 +1,251 @@
+/* Top level */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    background-image: url('img/bg.png');
+    overflow-x: hidden;
+}
+
+/* Site title */
+h1 {
+    display: block;
+    width: 600px;
+    height: 200px;
+    position: absolute;
+    left: 6%;
+    font-size: 50pt;
+    font-weight: 700;
+    text-align: right;
+}
+
+#h1black {
+    color: #000;
+    text-shadow: 3px 3px #fff;
+    z-index: 9;
+}
+#h1white {
+    color: #fff;
+    text-shadow: 3px 3px #000;
+    z-index: 0;
+}
+
+/* Animated header */
+#header_anim {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: 50%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: #ebf3f6;
+    z-index: 1;
+}
+
+#dance_dude {
+    position: absolute;
+    left: 30%;
+    z-index: 9;
+}
+
+.header_element {
+    position: absolute;
+    right: -500px;
+}
+
+.fground {
+    bottom: 0%;
+    z-index: 10;
+}
+
+.mground {
+    bottom: 0%;
+    z-index: 8;
+}
+
+.bground {
+    bottom: 3%;
+    z-index: 6;
+}
+
+.sky01  {
+    bottom: 50%;
+    opacity: 0.7;
+    z-index: 7;
+}
+
+.sky02 {
+    bottom: 70%;
+    opacity: 0.7;
+    z-index: 5;
+}
+
+/* Content */
+#content {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    margin: 150px auto 0 auto;
+    text-align: center;
+}
+
+p {
+    position: relative;
+    padding: 0 15% 0 15%;
+    font-size: 15pt;
+    line-height: 20pt;
+    text-align: left;
+    color: #fff;
+}
+
+a.go_down, a.go_up {
+    color: #428bca;
+    margin: 0;
+    padding: 5px 7px 7px 7px;
+	border-radius: 50%;
+	background: rgba(255,255,255, 0);
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	transition: all 0.2s;
+    text-align: center;
+}
+
+a.go_down:hover, a.go_up:hover {
+    color: #000;
+	background: rgba(66,139,202, 1);
+}
+
+/* Content jump pad */
+#jump_pad {
+    position: relative;
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
+#jump_pad a {
+    color: rgba(0,0,0, 0);
+    text-decoration: none;
+}
+
+.jump_button {
+	width: 200px;
+	height: 300px;
+    margin: 0 20px 0 20px;
+    padding: 8px;
+    position: relative;
+    display: inline-block;
+}
+
+.jump_button .jump_button_content {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255, 0);
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+	transition: all 0.6s;
+    outline: none;
+    padding: 3px;
+}
+
+.jump_button:hover .jump_button_content {
+    background: rgba(255,255,255, 1);
+}
+
+svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+svg line {
+	stroke-width: 5px;
+	stroke: #fff;
+	fill: none;
+	-webkit-transition: all 0.6s ease-in-out;
+	transition: transform 0.6s ease-in-out;
+}
+
+svg line.top, svg line.bottom {
+    stroke-dasharray: 200px;
+}
+
+svg line.left, svg line.right {
+    stroke-dasharray: 300px;
+}
+
+.jump_button:hover svg line.top {
+    -webkit-transform: translateX(-400px);
+    transform: translateX(-400px);
+}
+
+.jump_button:hover svg line.bottom {
+    -webkit-transform: translateX(400px);
+    transform: translateX(400px);
+}
+
+.jump_button:hover svg line.left {
+    -webkit-transform: translateY(600px);
+    transform: translateY(600px);
+}
+
+.jump_button:hover svg line.right {
+    -webkit-transform: translateY(-600px);
+    transform: translateY(-600px);
+}
+
+svg rect.box {
+    fill: #fff;
+    opacity: 0;
+	-webkit-transition: all 0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
+}
+
+svg rect.box:hover {
+    opacity: 0.2;
+}
+
+.jump_button h3 {
+    display: table-cell;
+    height: 180px;
+    width: 180px;
+    font-size: 20pt;
+    color: #428bca;
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+	transition: all 0.6s;
+    letter-spacing: 2px;
+    vertical-align: middle;
+}
+
+.jump_button:hover h3 {
+    color: #428bca;
+    font-size: 22pt;
+    letter-spacing: 4px;
+}
+
+.jump_button span {
+    display: table-cell;
+    height: 100px;
+    width: 180px;
+    color: #fff;
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+	transition: all 0.6s;
+    vertical-align: top;
+}
+
+.jump_button:hover span {
+    color: #000;
+}
+
+/* Content footer */
+p.footer {
+    position: relative;
+    font-size: 8pt;
+    width: 100%;
+    text-align: center;
+    bottom: -28%;
+}
