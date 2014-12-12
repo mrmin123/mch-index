@@ -1,0 +1,119 @@
+body, div, h1, h2, h3, p {
+    font-family: 'Noto Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, p {
+    font-weight: normal;
+    font-size: 100%;
+}
+
+#circles_container {
+    position: fixed;
+    top: -50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200%;
+    z-index: 8;
+    pointer-events: none;
+}
+
+.content_column {
+    text-align: center;
+}
+
+h1 {
+    margin: .5em auto .5em auto;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+h2 {
+    margin: 0.2em auto .5em auto;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+h2 a {
+    color: #428bca;
+    text-decoration: none;
+    outline: none;
+}
+
+h3 {
+    margin: .5em auto 0 auto;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+p {
+    margin: .5em auto 0 auto;
+    font-size: 1.1em;
+}
+
+i.fa {
+    margin: 1em auto 0 auto;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#fp-nav ul li a {
+    outline: none;
+}
+
+#fp-nav ul li a span {
+    background: rgba(255,255,255, 0.5);
+}
+
+#fp-nav ul li a.active span {
+    background: rgba(0,0,0, 0.8);
+}
+
+#fp-nav ul li .fp-tooltip {
+    color: #000;
+    background-color: #fff;
+}
+
+@media screen and (max-width: 760px) {
+    h3, p {
+        width: 20em;
+    }
+}
+
+@media screen and (max-device-width: 760px) {
+    h1, h2 {
+        font-size: 5em;
+    }
+
+    h3, p {
+        width: 20em;
+        font-size: 2.2em;
+    }
+
+    i.fa {
+        font-size: 3em;
+    }
+
+    #fp-nav ul li {
+        width: 20px;
+        height: 20px;
+        margin: 10px;
+    }
+
+    #fp-nav ul li a span {
+        width: 100%;
+        height: 100%;
+    }
+
+    #fp-nav ul li a.active span {
+        border: 1px solid #fff;
+    }
+
+    #fp-nav ul li .fp-tooltip {
+        display: none;
+    }
+}
