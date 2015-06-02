@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var sections = ['', 'github', 'tv', 'read', 'flickr'];
+    var sections = ['', 'github', 'flickr', 'read', 'calculatingpalico', 'tamabot', 'tv'];
     var mobileCheck = window.matchMedia("only screen and (max-device-width: 760px)");
 
     var circles = Snap.select('#circles');

@@ -175,9 +175,8 @@
                     <i class="fa fa-caret-square-o-down"></i> <i class="fa fa-caret-square-o-up"></i>
                 </div>
                 <div class="section">
-                    <h2><a class="out" href="/tv/">/tv</a></h2>
-                    <h3>stay a while and listen</h3>
-                    <p>lightweight twitch.tv interface</p>
+                    <h2><a class="out" href="https://www.flickr.com/photos/mrmin123/">flickr</a></h2>
+                    <p>photography; a stupidly expensive hobby</p>
                     <i class="fa fa-caret-square-o-down"></i> <i class="fa fa-caret-square-o-up"></i>
                 </div>
                 <div class="section">
@@ -187,14 +186,33 @@
                     <i class="fa fa-caret-square-o-down"></i> <i class="fa fa-caret-square-o-up"></i>
                 </div>
                 <div class="section">
-                    <h2><a class="out" href="https://www.flickr.com/photos/mrmin123/">flickr</a></h2>
-                    <p>photography; a stupidly expensive hobby</p>
+                    <h2><a class="out" href="/calculatingpalico/">the calculating palico</a></h2>
+                    <p>an interactive damage calcultor for the Monster Hunter 4U game</p>
+                    <i class="fa fa-caret-square-o-down"></i> <i class="fa fa-caret-square-o-up"></i>
+                </div>
+                <div class="section">
+                    <h2><a class="out" href="/tamabot/">tamabot</a></h2>
+                    <p>a helper bot for the Puzzle and Dragons subreddit</p>
+                    <i class="fa fa-caret-square-o-down"></i> <i class="fa fa-caret-square-o-up"></i>
+                </div>
+                <div class="section">
+                    <h2><a class="out" href="/tv/">/tv</a></h2>
+                    <h3>stay a while and listen</h3>
+                    <p>lightweight twitch.tv interface</p>
                     <i class="fa fa-caret-square-o-down"></i> <i class="fa fa-caret-square-o-up"></i>
                 </div>
             </div>
         </div>
         <div class="pure-u-1-24 pure-u-md-7-24"></div>
     </div>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+        ga('create', 'UA-63592578-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 </body>
 </html>
