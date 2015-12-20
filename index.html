@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang='en'>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>minyoung.ch</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link rel='stylesheet' href='index.css' type='text/css' media='screen' />
+</head>
+<body>
+	<div id='container'>
+		<div class='item' v-for='item in items'>
+			<div v-bind:class='[header, item.main ? mainHeader : ""]' @click='expand(item.id)' v-if='show != item.id' transition='headerTransition'>
+				{{item.title}}
+			</div>
+			<div v-if='show == item.id' transition='panelTransition' v-bind:class='[panel, item.main ? mainPanel : ""]'>
+				<div class='panel-box'>
+					<video autoplay loop poster='rsc/{{item.bg}}.jpg' class='webmbg' transition='webmbgTransition'>
+						<source src='rsc/{{item.bg}}.webm' type='video/webm'>
+					</video>
+					<div v-if='item.main'>
+						<h1>{{item.title}}</h1>
+						<span>{{item.text}}</span>
+						<span id='anim'></span>
+					</div>
+					<div v-else>
+						<a href='{{item.url}}'>
+						<div>
+							<h2><span>{{item.title}}</span></h2>
+							<h3 v-if='item.subtitle'>{{item.subtitle}}</h3>
+							<span>{{item.text}}</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script rel='import' src='http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.12/vue.min.js'></script>
+	<script>
+		var data = {
+			show: 0,
+			transitionState: 'Idle',
+			header: 'header',
+			mainHeader: 'main-header',
+			panel: 'panel',
+			mainPanel: 'main-panel',
+			fa: 'fa',
+			items: [
+				{id: 0,
+					title: 'minyoung.ch',
+					text: 'welcome to my little corner of the internet. enjoy your stay!',
+					main: true
+				},
+				{id: 1,
+					title: 'github',
+					icon: 'fa-github',
+					text: 'coding projects on the side',
+					url: 'https://github.com/mrmin123',
+					bg: 'github'
+				},
+				{id: 2,
+					title: 'flickr',
+					icon: 'fa-flickr',
+					text: 'the world through different lenses',
+					url: 'https://www.flickr.com/photos/mrmin123/',
+					bg: 'flickr'
+				},
+				{id: 3,
+					title: '/read',
+					icon: 'fa-book',
+					subtitle: 'reading and rambling',
+					text: 'a collection of my book reviews',
+					url: '/read/',
+					bg: 'read'
+				},
+				{id: 4,
+					title: 'the calculating palico',
+					icon: 'fa-calculator',
+					text: 'an interactive damage calcultor for the Monster Hunter 4U game',
+					url: '/calculatingpalico/',
+					bg: 'calcpal'
+				},
+				{id: 5,
+					title: 'tamabot',
+					icon: 'fa-commenting-o',
+					text: 'a helper bot for the Puzzle and Dragons subreddit',
+					url: '/tamabot/',
+					bg: 'pad'
+				},
+				{id: 6,
+					title: '/tv',
+					icon: 'fa-television',
+					subtitle: 'stay a while and listen',
+					text: 'lightweight twitch.tv interface',
+					url: '/tv/',
+					bg: 'tv'
+				}
+			]
+		}
+		var vm = new Vue({
+			el: '#container',
+			data: data,
+			methods: {
+				expand: function(e) {
+					this.show = e;
+				},
+			}
+		});
+	</script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-63592578-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+</body>
+</html>

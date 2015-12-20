@@ -1,3 +1,5 @@
 read/
 tv/
 includes/
+*.sublime-project
+*.sublime-workspace
