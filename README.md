@@ -1,7 +1,3 @@
-minyoung.ch
+minyoung.dev // mrmin123.dev
 =======
-v4.0 - 2015-12 flavor
-
-Dependencies:
-* [Montserrat](https://www.google.com/fonts/specimen/Montserrat)
-* [Vue.js](http://vuejs.org/)
+v5.0 - 2019-04 edition
